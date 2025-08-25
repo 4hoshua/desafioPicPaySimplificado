@@ -1,0 +1,15 @@
+services:
+
+  desafio-picpay-simplificado-api:
+    container_name: desafio-picpay-simplificado-api
+    build: './backend'
+    networks:
+      - auth
+    ports:
+      - "8080:8080"
+    profiles:
+      - dev
+
+networks:
+  auth:
+    driver: bridge
